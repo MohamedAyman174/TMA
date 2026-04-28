@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Room details and prices for Perspective Hotel Booking." />
+  <title>Perspective Hotel Booking | Rooms Details</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Perspective Hotel Booking home">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span><strong>Perspective</strong><small>Hotel Booking</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Hotel Categories</a></li>
+        <li><a class="active" href="rooms.html">Rooms Details</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero section">
+      <p class="eyebrow">Room Details</p>
+      <h1>Compare rooms before making a reservation.</h1>
+      <p>
+        The room cards below are rendered from static JavaScript data. Use the reserve button to open
+        the reservation page with the selected room.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="rooms-title">
+      <div class="section-heading">
+        <p class="eyebrow">Available Rooms</p>
+        <h2 id="rooms-title">Rooms and prices</h2>
+      </div>
+
+      <div class="filter-notice" id="filterNotice" role="status" aria-live="polite"></div>
+      <div class="rooms-grid" id="roomsGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Perspective Hotel Booking. Front-end graduation project.</p>
+    <a href="reservation.html">Reserve a Room</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

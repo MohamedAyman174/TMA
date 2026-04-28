@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Front-end reservation calculator for Perspective Hotel Booking." />
+  <title>Perspective Hotel Booking | Reservation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Perspective Hotel Booking home">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span><strong>Perspective</strong><small>Hotel Booking</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Hotel Categories</a></li>
+        <li><a href="rooms.html">Rooms Details</a></li>
+        <li><a class="active" href="reservation.html">Reservation</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero section">
+      <p class="eyebrow">Reservation</p>
+      <h1>Calculate your stay before you confirm.</h1>
+      <p>
+        This form uses only front-end JavaScript. It validates input, calculates nights, and displays the
+        total price without sending data anywhere.
+      </p>
+    </section>
+
+    <section class="section reservation-layout" aria-labelledby="reservation-title">
+      <form class="form-card reservation-form" id="reservationForm" novalidate>
+        <div class="section-heading compact">
+          <p class="eyebrow">Booking Form</p>
+          <h2 id="reservation-title">Guest and room details</h2>
+        </div>
+
+        <div class="form-group">
+          <label for="roomSelect">Select a room</label>
+          <select id="roomSelect" name="roomSelect" required>
+            <option value="">Choose a room</option>
+          </select>
+          <small class="field-error" id="roomSelectError"></small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestName">Guest name</label>
+            <input id="guestName" name="guestName" type="text" autocomplete="name" required />
+            <small class="field-error" id="guestNameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="guestEmail">Email</label>
+            <input id="guestEmail" name="guestEmail" type="email" autocomplete="email" required />
+            <small class="field-error" id="guestEmailError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkIn">Check-in date</label>
+            <input id="checkIn" name="checkIn" type="date" required />
+            <small class="field-error" id="checkInError"></small>
+          </div>
+          <div class="form-group">
+            <label for="checkOut">Check-out date</label>
+            <input id="checkOut" name="checkOut" type="date" required />
+            <small class="field-error" id="checkOutError"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="guestCount">Number of guests</label>
+          <input id="guestCount" name="guestCount" type="number" min="1" max="8" value="1" required />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Confirm Front-End Reservation</button>
+        <p class="form-message" id="reservationMessage" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="summary-card" aria-labelledby="summary-title">
+        <p class="eyebrow">Live Summary</p>
+        <h2 id="summary-title">Reservation total</h2>
+        <div class="selected-room" id="selectedRoom">
+          <p>Select a room to view details and price.</p>
+        </div>
+        <dl class="price-summary">
+          <div>
+            <dt>Price per night</dt>
+            <dd id="summaryPrice">$0</dd>
+          </div>
+          <div>
+            <dt>Number of nights</dt>
+            <dd id="summaryNights">0</dd>
+          </div>
+          <div class="total-row">
+            <dt>Total price</dt>
+            <dd id="summaryTotal">$0</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Perspective Hotel Booking. Front-end graduation project.</p>
+    <a href="rooms.html">Back to Rooms</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

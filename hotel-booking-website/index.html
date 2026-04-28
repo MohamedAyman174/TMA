@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Perspective Hotel Booking graduation project built with HTML, CSS, and JavaScript." />
+  <title>Perspective Hotel Booking | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Perspective Hotel Booking home">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span>
+          <strong>Perspective</strong>
+          <small>Hotel Booking</small>
+        </span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="categories.html">Hotel Categories</a></li>
+        <li><a href="rooms.html">Rooms Details</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Graduation Project</p>
+        <h1>Book your next hotel stay with clarity, depth, and confidence.</h1>
+        <p>
+          Perspective Hotel Booking is a responsive front-end website that helps visitors explore hotel types,
+          compare rooms, and calculate reservation totals instantly.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="btn btn-primary" href="reservation.html">Start Reservation</a>
+          <a class="btn btn-secondary" href="rooms.html">View Rooms</a>
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-label="Hotel booking visual">
+        <div class="isometric-hotel">
+          <div class="hotel-roof"></div>
+          <div class="hotel-face hotel-face-front">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+          <div class="hotel-face hotel-face-side">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="booking-chip chip-one">5 Rooms</div>
+          <div class="booking-chip chip-two">$90+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split-section" aria-labelledby="vision-title">
+      <div>
+        <p class="eyebrow">Purpose</p>
+        <h2 id="vision-title">Vision and Mission</h2>
+      </div>
+      <div class="info-grid">
+        <article class="depth-card">
+          <h3>Vision</h3>
+          <p>
+            To present a clean and accessible hotel booking experience that makes room selection simple,
+            informative, and visually engaging.
+          </p>
+        </article>
+        <article class="depth-card">
+          <h3>Mission</h3>
+          <p>
+            To demonstrate front-end development skills through semantic pages, responsive layouts,
+            interactive JavaScript, and a complete reservation calculation flow.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section feature-band" aria-labelledby="features-title">
+      <div class="section-heading">
+        <p class="eyebrow">Explore</p>
+        <h2 id="features-title">Everything a visitor needs</h2>
+      </div>
+      <div class="quick-grid">
+        <a class="quick-link" href="categories.html">
+          <span>01</span>
+          <strong>Choose hotel category</strong>
+          <small>Luxury, business, family, budget, or beach resort.</small>
+        </a>
+        <a class="quick-link" href="rooms.html">
+          <span>02</span>
+          <strong>Compare room details</strong>
+          <small>Images, features, descriptions, and prices.</small>
+        </a>
+        <a class="quick-link" href="reservation.html">
+          <span>03</span>
+          <strong>Calculate reservation</strong>
+          <small>Front-end-only date and total price calculation.</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="section split-section" aria-labelledby="developer-title">
+      <div>
+        <p class="eyebrow">Developer</p>
+        <h2 id="developer-title">About the developer</h2>
+      </div>
+      <article class="profile-card">
+        <div class="profile-avatar" aria-hidden="true">YN</div>
+        <div>
+          <h3>[Your Name]</h3>
+          <p class="role">Front-End Developer</p>
+          <p>
+            This website was designed and developed as part of a graduation project to demonstrate
+            front-end web development skills using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Contact us</h2>
+        <p>Send a front-end-only message or use the project contact details below.</p>
+      </div>
+
+      <div class="contact-layout">
+        <address class="contact-card" aria-label="Contact details">
+          <p><strong>Email:</strong> info@perspectivehotel.example</p>
+          <p><strong>Phone:</strong> +20 100 000 0000</p>
+          <p><strong>Location:</strong> Cairo, Egypt</p>
+        </address>
+
+        <form class="form-card" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input id="contactName" name="contactName" type="text" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="contactEmail" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p class="form-message" id="contactMessageStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Perspective Hotel Booking. Front-end graduation project.</p>
+    <a href="reservation.html">Reserve a Room</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

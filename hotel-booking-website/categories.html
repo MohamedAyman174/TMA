@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Select a hotel category in Perspective Hotel Booking." />
+  <title>Perspective Hotel Booking | Categories</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Perspective Hotel Booking home">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span><strong>Perspective</strong><small>Hotel Booking</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="categories.html">Hotel Categories</a></li>
+        <li><a href="rooms.html">Rooms Details</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero section">
+      <p class="eyebrow">Hotel Types</p>
+      <h1>Choose the stay that matches your trip.</h1>
+      <p>
+        Select a category to view room details. Each card uses layered perspective styling while keeping the
+        content readable and accessible.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <p class="eyebrow">Categories</p>
+        <h2 id="categories-title">Hotel categories</h2>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card" href="rooms.html?category=luxury">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Luxury hotel lobby with elegant seating" />
+          <span class="category-icon" aria-hidden="true">L</span>
+          <h3>Luxury Hotels</h3>
+          <p>Premium suites, refined service, and elegant spaces for special stays.</p>
+        </a>
+
+        <a class="category-card" href="rooms.html?category=business">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Modern business workspace" />
+          <span class="category-icon" aria-hidden="true">B</span>
+          <h3>Business Hotels</h3>
+          <p>Quiet rooms, work desks, fast Wi-Fi, and convenient city access.</p>
+        </a>
+
+        <a class="category-card" href="rooms.html?category=family">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Comfortable family bedroom" />
+          <span class="category-icon" aria-hidden="true">F</span>
+          <h3>Family Hotels</h3>
+          <p>Large rooms, flexible sleeping space, and friendly shared facilities.</p>
+        </a>
+
+        <a class="category-card" href="rooms.html?category=budget">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Simple clean hotel room" />
+          <span class="category-icon" aria-hidden="true">$</span>
+          <h3>Budget Hotels</h3>
+          <p>Clean, comfortable rooms with essential features at a lower price.</p>
+        </a>
+
+        <a class="category-card" href="rooms.html?category=beach">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Beach resort with ocean view" />
+          <span class="category-icon" aria-hidden="true">R</span>
+          <h3>Beach Resorts</h3>
+          <p>Relaxing coastal rooms with sea views, pools, and resort comfort.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Perspective Hotel Booking. Front-end graduation project.</p>
+    <a href="reservation.html">Reserve a Room</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

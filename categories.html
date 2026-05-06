@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categories — Aurum Stay</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">AURUM<span>STAY</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html" class="active">Categories</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+</nav>
+
+<div class="page-header">
+  <span class="label">Browse by Style</span>
+  <h1>Room <em style="font-style:italic;color:var(--gold-light)">Categories</em></h1>
+  <p style="margin-top:0.8rem;color:var(--text-muted);font-size:0.95rem;">Choose the experience that speaks to you</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="categories-grid">
+
+      <div class="category-card" onclick="goToRooms('luxury')">
+        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Luxury">
+        <div class="category-card-overlay">
+          <span class="category-tag">Luxury</span>
+          <h3>Luxury Suites</h3>
+          <p>Opulent interiors, panoramic views, butler service</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="goToRooms('business')">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Business">
+        <div class="category-card-overlay">
+          <span class="category-tag">Business</span>
+          <h3>Business Rooms</h3>
+          <p>Fast Wi-Fi, ergonomic desks, quiet environment</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="goToRooms('family')">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Family">
+        <div class="category-card-overlay">
+          <span class="category-tag">Family</span>
+          <h3>Family Suites</h3>
+          <p>Spacious rooms, bunk beds, kid-friendly amenities</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="goToRooms('budget')">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Budget">
+        <div class="category-card-overlay">
+          <span class="category-tag">Budget</span>
+          <h3>Budget Rooms</h3>
+          <p>Comfortable, clean, and affordable stays</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="goToRooms('beach')" style="grid-column: span 2;">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80" alt="Beach" style="height:100%;">
+        <div class="category-card-overlay">
+          <span class="category-tag">Beach</span>
+          <h3>Beach Villas</h3>
+          <p>Waking up to the sound of waves — every single morning</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="nav-logo">AURUM<span>STAY</span></div>
+    <p>© 2026 Aurum Stay. Crafted with care.</p>
+    <ul class="footer-links">
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rooms — Aurum Stay</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">AURUM<span>STAY</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="rooms.html" class="active">Rooms</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+</nav>
+
+<div class="page-header">
+  <span class="label">Our Collection</span>
+  <h1>Available <em style="font-style:italic;color:var(--gold-light)">Rooms</em></h1>
+  <p style="margin-top:0.8rem;color:var(--text-muted);font-size:0.95rem;">Select a room below to begin your reservation</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="rooms-grid" id="rooms-grid">
+
+      <div class="room-card" data-room="Royal Penthouse Suite" data-price="450" onclick="selectRoom(this)">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Royal Penthouse Suite">
+        </div>
+        <div class="room-body">
+          <span class="label">Luxury</span>
+          <h3>Royal Penthouse Suite</h3>
+          <p>Floor-to-ceiling windows, private terrace, marble bathroom, and personalized butler service for an unmatched stay.</p>
+          <div class="room-price">$450 <span>/ night</span></div>
+        </div>
+      </div>
+
+      <div class="room-card" data-room="Executive Business Room" data-price="180" onclick="selectRoom(this)">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Executive Business Room">
+        </div>
+        <div class="room-body">
+          <span class="label">Business</span>
+          <h3>Executive Business Room</h3>
+          <p>Ergonomic workstation, high-speed fiber Wi-Fi, soundproofing, and a dedicated meeting nook — built for productivity.</p>
+          <div class="room-price">$180 <span>/ night</span></div>
+        </div>
+      </div>
+
+      <div class="room-card" data-room="Family Grand Suite" data-price="260" onclick="selectRoom(this)">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Family Grand Suite">
+        </div>
+        <div class="room-body">
+          <span class="label">Family</span>
+          <h3>Family Grand Suite</h3>
+          <p>Two bedrooms, bunk beds, a kitchenette, and a play area — everything a family needs under one roof.</p>
+          <div class="room-price">$260 <span>/ night</span></div>
+        </div>
+      </div>
+
+      <div class="room-card" data-room="Cozy Budget Room" data-price="75" onclick="selectRoom(this)">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Cozy Budget Room">
+        </div>
+        <div class="room-body">
+          <span class="label">Budget</span>
+          <h3>Cozy Budget Room</h3>
+          <p>Clean, comfortable, and thoughtfully designed. Perfect for solo travelers or short stays on a budget.</p>
+          <div class="room-price">$75 <span>/ night</span></div>
+        </div>
+      </div>
+
+      <div class="room-card" data-room="Beachfront Villa" data-price="520" onclick="selectRoom(this)">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Beachfront Villa">
+        </div>
+        <div class="room-body">
+          <span class="label">Beach</span>
+          <h3>Beachfront Villa</h3>
+          <p>Private pool, direct beach access, open-air shower, and breathtaking ocean views from every room.</p>
+          <div class="room-price">$520 <span>/ night</span></div>
+        </div>
+      </div>
+
+      <div class="room-card" data-room="Garden View Double" data-price="120" onclick="selectRoom(this)">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1444201983204-c43cbd584d93?w=800&q=80" alt="Garden View Double">
+        </div>
+        <div class="room-body">
+          <span class="label">Budget</span>
+          <h3>Garden View Double</h3>
+          <p>A serene retreat overlooking lush gardens. King-size bed, natural light, and a peaceful atmosphere await.</p>
+          <div class="room-price">$120 <span>/ night</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Reservation Panel -->
+    <div class="reservation">
+      <span class="label">Reservation</span>
+      <h2>Calculate Your Stay</h2>
+      <div class="res-form">
+        <div class="form-group">
+          <label for="res-room">Selected Room</label>
+          <select id="res-room" onchange="calcTotal()">
+            <option value="">— Choose a room —</option>
+            <option value="450">Royal Penthouse Suite — $450/night</option>
+            <option value="180">Executive Business Room — $180/night</option>
+            <option value="260">Family Grand Suite — $260/night</option>
+            <option value="75">Cozy Budget Room — $75/night</option>
+            <option value="520">Beachfront Villa — $520/night</option>
+            <option value="120">Garden View Double — $120/night</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="res-nights">Number of Nights</label>
+          <input type="number" id="res-nights" min="1" max="30" placeholder="e.g. 3" oninput="calcTotal()">
+        </div>
+        <div class="form-group">
+          <label for="res-checkin">Check-in Date (optional)</label>
+          <input type="date" id="res-checkin">
+        </div>
+      </div>
+      <div class="res-total">
+        <div>
+          <div class="res-total-label">Estimated Total</div>
+          <div class="res-total-price" id="res-total">$0</div>
+        </div>
+        <button class="btn-secondary" onclick="confirmReservation()">Confirm Reservation</button>
+      </div>
+      <div id="res-message"></div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="nav-logo">AURUM<span>STAY</span></div>
+    <p>© 2026 Aurum Stay. Crafted with care.</p>
+    <ul class="footer-links">
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

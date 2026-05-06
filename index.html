@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Aurum Stay</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">AURUM<span>STAY</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+</nav>
+
+<div class="page-header">
+  <span class="label">We'd Love to Hear From You</span>
+  <h1>Get in <em style="font-style:italic;color:var(--gold-light)">Touch</em></h1>
+  <p style="margin-top:0.8rem;color:var(--text-muted);font-size:0.95rem;">Questions, requests, or just a hello — we're here</p>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="contact-grid" style="margin-bottom:4rem;">
+      <div class="contact-item">
+        <div class="contact-icon">✉</div>
+        <p class="contact-type">Email</p>
+        <p>hello@aurumstay.com</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✆</div>
+        <p class="contact-type">Phone</p>
+        <p>+20 100 000 0000</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">⌖</div>
+        <p class="contact-type">Location</p>
+        <p>Cairo, Egypt</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">◷</div>
+        <p class="contact-type">Hours</p>
+        <p>24/7 Front Desk</p>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <span class="label">Send a Message</span>
+      <h2 style="margin-bottom:2rem;">Write to Us</h2>
+
+      <div class="form-group">
+        <label for="c-name">Full Name</label>
+        <input type="text" id="c-name" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="c-email">Email Address</label>
+        <input type="email" id="c-email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg" placeholder="How can we help you?"></textarea>
+      </div>
+
+      <button class="btn-secondary" onclick="submitContact()" style="width:100%;padding:1rem;font-size:0.85rem;">Send Message</button>
+      <div id="form-msg"></div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="nav-logo">AURUM<span>STAY</span></div>
+    <p>© 2026 Aurum Stay. Crafted with care.</p>
+    <ul class="footer-links">
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
